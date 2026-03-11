@@ -1,0 +1,329 @@
+/* Add Expense Page Styles */
+.add-expense-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.add-expense-content {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  margin-left: calc(260px + 40px); /* Sidebar width + margin */
+  transition: margin-left 0.3s;
+}
+
+.add-expense-box {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-expense-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Enhanced Date Input Styling */
+.form-group input[type="date"] {
+  position: relative;
+  padding: 14px 16px;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input[type="date"]:hover {
+  background: #ffffff;
+  border-color: #667eea;
+}
+
+.form-group input[type="date"]:focus {
+  background: #ffffff;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Styling date picker icon */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 14px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-save:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-save:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 14px;
+  background: #757575;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+  background: #616161;
+  transform: translateY(-2px);
+}
+
+/* Recurring Transaction Section */
+.recurring-section {
+  background: #f0f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #bbdefb;
+}
+
+.recurring-section label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #1976d2;
+}
+
+.recurring-section input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+.helper-text {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .add-expense-content {
+    margin-left: calc(70px + 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .add-expense-content {
+    margin-left: calc(70px + 10px);
+    max-width: 600px;
+  }
+
+  .add-expense-box {
+    padding: 30px 20px;
+  }
+
+  .add-expense-box h2 {
+    font-size: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-expense-content {
+    margin-left: calc(60px + 10px);
+    padding: 10px;
+  }
+
+  .add-expense-box {
+    padding: 20px 15px;
+  }
+
+  .add-expense-box h2 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* =============================================== */
+/* DARK MODE STYLES FOR ADD EXPENSE */
+/* =============================================== */
+
+.dark-theme .add-expense-container {
+  background: #121212;
+}
+
+.dark-theme .add-expense-box {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .add-expense-box h2 {
+  color: #f4f4f5;
+}
+
+.dark-theme .form-group label {
+  color: #f4f4f5;
+}
+
+.dark-theme .form-group input,
+.dark-theme .form-group select,
+.dark-theme .form-group textarea {
+  background: #2d2d2d;
+  color: #e4e4e7;
+  border: 1px solid #3d3d3d;
+}
+
+.dark-theme .form-group input:focus,
+.dark-theme .form-group select:focus,
+.dark-theme .form-group textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.dark-theme .form-group input::placeholder,
+.dark-theme .form-group textarea::placeholder {
+  color: #71717a;
+}
+
+.dark-theme .recurring-section {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid #667eea;
+}
+
+.dark-theme .recurring-section label {
+  color: #818cf8;
+}
+
+.dark-theme .helper-text {
+  color: #a1a1aa;
+}
+
+/* Dark mode date input styles */
+.dark-theme .form-group input[type="date"] {
+  background: #2d2d2d;
+  color: #e4e4e7;
+  border: 1px solid #3d3d3d;
+}
+
+.dark-theme .form-group input[type="date"]:hover {
+  background: #3d3d3d;
+  border-color: #667eea;
+}
+
+.dark-theme .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

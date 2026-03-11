@@ -1,0 +1,311 @@
+/* Monthly Expenses Page Styles */
+
+.monthly-expenses-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.monthly-expenses-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-left: 260px; /* Space for sidebar */
+  transition: margin-left 0.3s;
+}
+
+.monthly-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.monthly-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.monthly-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Filters Section */
+.monthly-filters {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 250px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.month-input,
+.category-select {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.month-input:focus,
+.category-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Summary Section */
+.monthly-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 40px;
+  gap: 8px;
+}
+
+.summary-label {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.summary-value.income {
+  color: #4caf50;
+}
+
+.summary-value.expense {
+  color: #f44336;
+}
+
+.summary-value.savings {
+  color: #9c27b0;
+}
+
+/* Expenses List */
+.monthly-expenses-list {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.no-expenses {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.no-expenses p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.expenses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .monthly-expenses-content {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .monthly-expenses-content {
+    margin-left: 70px;
+    padding: 15px;
+  }
+
+  .monthly-header h1 {
+    font-size: 2rem;
+  }
+
+  .monthly-header p {
+    font-size: 0.95rem;
+  }
+
+  .monthly-filters {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .monthly-summary {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .summary-item {
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .summary-value {
+    font-size: 1.5rem;
+  }
+
+  .monthly-expenses-list {
+    padding: 20px;
+  }
+
+  .expenses-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .monthly-expenses-content {
+    padding: 12px;
+    margin-left: 60px;
+  }
+
+  .monthly-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .monthly-header p {
+    font-size: 0.9rem;
+  }
+
+  .monthly-filters {
+    padding: 15px;
+  }
+
+  .filter-group label {
+    font-size: 0.9rem;
+  }
+
+  .month-input,
+  .category-select {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .monthly-summary {
+    padding: 12px;
+  }
+
+  .summary-item {
+    padding: 10px 15px;
+  }
+
+  .summary-label {
+    font-size: 0.9rem;
+  }
+
+  .summary-value {
+    font-size: 1.3rem;
+  }
+
+  .monthly-expenses-list {
+    padding: 15px;
+  }
+}
+
+/* =============================================== */
+/* DARK MODE STYLES FOR MONTHLY EXPENSES */
+/* =============================================== */
+
+.dark-theme .monthly-expenses-container {
+  background: #121212;
+}
+
+.dark-theme .monthly-filters {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .filter-group label {
+  color: #f4f4f5;
+}
+
+.dark-theme .month-input,
+.dark-theme .category-select {
+  background: #2d2d2d;
+  color: #e4e4e7;
+  border: 1px solid #3d3d3d;
+}
+
+.dark-theme .month-input:focus,
+.dark-theme .category-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.dark-theme .monthly-summary {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .summary-label {
+  color: #a1a1aa;
+}
+
+.dark-theme .monthly-expenses-list {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .loading-text {
+  color: #a1a1aa;
+}
+
+.dark-theme .no-expenses p {
+  color: #a1a1aa;
+}

@@ -1,0 +1,126 @@
+/* Timeline Component Styles */
+.timeline-container {
+  padding: 20px 0;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 16px;
+}
+
+/* Dark Mode Styles */
+.dark-theme .timeline-container {
+  color: #f4f4f5;
+}
+
+.dark-theme .no-data {
+  color: #a1a1aa;
+}
+
+/* Comprehensive React Chrono dark theme overrides */
+.dark-theme .timeline-container .timeline-vertical-circle,
+.dark-theme .timeline-container .timeline-circle,
+.dark-theme .timeline-container circle {
+  background-color: #818cf8 !important;
+  border-color: #667eea !important;
+}
+
+.dark-theme .timeline-container .vertical-item-row::before,
+.dark-theme .timeline-container .timeline-vertical-line {
+  background-color: #3d3d3d !important;
+}
+
+/* Force dark background on all card elements */
+.dark-theme .timeline-container .timeline-card-content,
+.dark-theme .timeline-container .card-content,
+.dark-theme .timeline-container div[class*="card"],
+.dark-theme .timeline-container div[class*="Card"] {
+  background-color: #2d2d2d !important;
+  background: #2d2d2d !important;
+  color: #f4f4f5 !important;
+  border: 1px solid #3d3d3d !important;
+}
+
+/* Card title styling */
+.dark-theme .timeline-container .card-title,
+.dark-theme .timeline-container .timeline-card-title,
+.dark-theme .timeline-container div[class*="title"] {
+  color: #818cf8 !important;
+  background: transparent !important;
+}
+
+/* Card subtitle and description */
+.dark-theme .timeline-container .card-sub-title,
+.dark-theme .timeline-container .card-description,
+.dark-theme .timeline-container .timeline-card-subtitle,
+.dark-theme .timeline-container div[class*="subtitle"],
+.dark-theme .timeline-container div[class*="description"],
+.dark-theme .timeline-container p,
+.dark-theme .timeline-container span {
+  color: #a1a1aa !important;
+  background: transparent !important;
+}
+
+/* Timeline date labels */
+.dark-theme .timeline-container .timeline-item-title,
+.dark-theme .timeline-container div[class*="Title"],
+.dark-theme .timeline-container .vertical-circle-title {
+  color: #818cf8 !important;
+}
+
+/* Ensure all nested divs have dark background */
+.dark-theme .timeline-container > div,
+.dark-theme .timeline-container > div > div {
+  background: transparent !important;
+}
+
+/* Override any white/light backgrounds */
+.dark-theme .timeline-container [style*="background"] {
+  background-color: #2d2d2d !important;
+}
+
+.dark-theme .timeline-container [style*="color: rgb(51, 51, 51)"],
+.dark-theme .timeline-container [style*="color: #333"] {
+  color: #f4f4f5 !important;
+}
+
+/* Custom class overrides */
+.dark-theme .chrono-card {
+  border: 1px solid #3d3d3d !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-theme .chrono-card-title {
+  color: #818cf8 !important;
+  font-weight: 600 !important;
+}
+
+.dark-theme .chrono-card-subtitle,
+.dark-theme .chrono-card-text {
+  color: #a1a1aa !important;
+}
+
+.dark-theme .chrono-title {
+  color: #818cf8 !important;
+  font-weight: 500 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-container {
+    padding: 10px 0;
+  }
+
+  .no-data {
+    font-size: 14px;
+    padding: 30px;
+  }
+}

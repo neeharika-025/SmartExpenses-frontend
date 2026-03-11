@@ -1,0 +1,342 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Loading Screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 24px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Base Responsive Styles */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* =============================================== */
+/* DARK MODE STYLES - ENHANCED */
+/* =============================================== */
+
+/* Dark Theme: Body and Global Elements */
+.dark-theme {
+  background: #121212;
+  color: #e4e4e7;
+}
+
+.dark-theme body {
+  background: #121212;
+  color: #e4e4e7;
+}
+
+/* Dark Theme: Scrollbar */
+.dark-theme ::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: #7c8aff;
+}
+
+/* Dark Theme: Cards and Containers */
+.dark-theme .add-expense-container,
+.dark-theme .dashboard-container,
+.dark-theme .monthly-expenses-container,
+.dark-theme .profile-container {
+  background: #121212;
+}
+
+.dark-theme .add-expense-box,
+.dark-theme .expense-card,
+.dark-theme .summary-card,
+.dark-theme .filters-section,
+.dark-theme .profile-box {
+  background: #1e1e1e;
+  color: #e4e4e7;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Theme: Headings */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 {
+  color: #f4f4f5;
+}
+
+/* Dark Theme: Input Fields */
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+  background: #2d2d2d;
+  color: #e4e4e7;
+  border: 2px solid #3d3d3d;
+}
+
+.dark-theme input::placeholder {
+  color: #999;
+}
+
+.dark-theme input:focus,
+.dark-theme select:focus,
+.dark-theme textarea:focus {
+  border-color: #667eea;
+  background: #333;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Dark Theme: Buttons */
+.dark-theme .btn-primary,
+.dark-theme .btn-save,
+.dark-theme .btn-add {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.dark-theme .btn-primary:hover,
+.dark-theme .btn-save:hover,
+.dark-theme .btn-add:hover {
+  background: linear-gradient(135deg, #7c8aff 0%, #8b5db8 100%);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+}
+
+.dark-theme .btn-cancel,
+.dark-theme .btn-secondary {
+  background: #2d2d2d;
+  color: #e4e4e7;
+  border: 2px solid #3d3d3d;
+}
+
+.dark-theme .btn-cancel:hover,
+.dark-theme .btn-secondary:hover {
+  background: #3d3d3d;
+  border-color: #4d4d4d;
+}
+
+.dark-theme .btn-search,
+.dark-theme .btn-clear {
+  background: #2d2d2d;
+  color: #e4e4e7;
+  border: 2px solid #3d3d3d;
+}
+
+.dark-theme .btn-search:hover,
+.dark-theme .btn-clear:hover {
+  background: #3d3d3d;
+  border-color: #667eea;
+}
+
+/* Dark Theme: Expense Cards */
+.dark-theme .expense-card {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme .expense-card:hover {
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  border-color: #3d3d3d;
+}
+
+.dark-theme .expense-header {
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.dark-theme .expense-title {
+  color: #f4f4f5;
+}
+
+.dark-theme .expense-category {
+  color: #a1a1aa;
+}
+
+/* Dark Theme: Summary Cards - Enhanced Gradients */
+.dark-theme .summary-card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .summary-card.income {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  box-shadow: 0 8px 16px rgba(34, 197, 94, 0.3);
+}
+
+.dark-theme .summary-card.expense {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.3);
+}
+
+.dark-theme .summary-card.balance {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.dark-theme .summary-card.savings {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  box-shadow: 0 8px 16px rgba(168, 85, 247, 0.3);
+}
+
+.dark-theme .summary-card h3 {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.dark-theme .summary-card .amount {
+  color: white;
+  font-weight: 700;
+}
+
+/* Dark Theme: Loading Screen */
+.dark-theme .loading-screen {
+  background: #121212;
+  color: #667eea;
+}
+
+/* Dark Theme: Error Messages */
+.dark-theme .error-message {
+  background: #3f1515;
+  color: #fca5a5;
+  border: 1px solid #7f1d1d;
+}
+
+/* Dark Theme: Labels */
+.dark-theme label {
+  color: #e4e4e7;
+  font-weight: 500;
+}
+
+/* Dark Theme: Links */
+.dark-theme a {
+  color: #818cf8;
+}
+
+.dark-theme a:hover {
+  color: #a5b4fc;
+}
+
+/* Dark Theme: Tables */
+.dark-theme table {
+  background: #1e1e1e;
+  color: #e4e4e7;
+}
+
+.dark-theme th {
+  background: #2d2d2d;
+  color: #f4f4f5;
+}
+
+.dark-theme td {
+  border-color: #2d2d2d;
+}
+
+/* Dark Theme: Modal/Dialog */
+.dark-theme .modal,
+.dark-theme .dialog {
+  background: #1e1e1e;
+  color: #e4e4e7;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark Theme: Filters Section */
+.dark-theme .filters-section {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+}
+
+/* Dark Theme: Chart Container */
+.dark-theme .chart-section,
+.dark-theme .timeline-section {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Theme: No Data/Empty States */
+.dark-theme .no-expenses,
+.dark-theme .no-data {
+  background: #1e1e1e;
+  color: #a1a1aa;
+  border: 2px dashed #3d3d3d;
+}
+

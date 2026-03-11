@@ -1,0 +1,53 @@
+/* Chart Component Styles */
+.chart-container {
+  padding: 20px;
+}
+
+.chart-container h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 16px;
+}
+
+/* Dark Mode Styles */
+.dark-theme .chart-container h3 {
+  color: #f4f4f5;
+}
+
+.dark-theme .no-data {
+  color: #a1a1aa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 15px;
+  }
+
+  .chart-container h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    padding: 10px;
+  }
+
+  .chart-container h3 {
+    font-size: 16px;
+  }
+
+  .no-data {
+    font-size: 14px;
+    padding: 30px;
+  }
+}
+
