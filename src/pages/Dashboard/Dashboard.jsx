@@ -71,6 +71,7 @@ function Dashboard() {
   useEffect(() => {
     fetchCurrentMonthExpenses();
     fetchSummary();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Refetch summary when expenses change
@@ -85,18 +86,6 @@ function Dashboard() {
   const fetchCurrentMonthExpenses = async () => {
     try {
       const response = await filterExpenses("", filterMonth);
-      setExpenses(response.data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching expenses:", error);
-      setLoading(false);
-    }
-  };
-
-  // Fetch all expenses
-  const fetchExpenses = async () => {
-    try {
-      const response = await getAllExpenses();
       setExpenses(response.data);
       setLoading(false);
     } catch (error) {

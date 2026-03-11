@@ -1,13 +1,12 @@
 // Navbar Component - Navigation bar with search, profile, and theme toggle
 import React, { useContext, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { FaWallet, FaUser, FaMoon, FaSun } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaUser, FaMoon, FaSun } from "react-icons/fa";
 import { AuthContext } from "../../context/AuthContext";
 import { useTheme } from "../../context/ThemeContext";
 import "./Navbar.css";
 
 function Navbar({ onSearch }) {
-  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const { theme, toggleTheme } = useTheme();
   const [searchTerm, setSearchTerm] = useState("");
