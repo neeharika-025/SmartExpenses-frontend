@@ -69,9 +69,14 @@ function Login() {
       login(response.data.token, response.data.user);
       navigate("/dashboard");
     } catch (err) {
-      setError(
-        err.response?.data?.message || "Login failed. Please try again.",
-      );
+      const message =
+        err.response?.data?.message ||
+        (err.request
+          ? "Unable to reach the server. Please check your connection or start the backend."
+          : null) ||
+        err.message ||
+        "Login failed. Please try again.";
+      setError(message);
     } finally {
       setLoading(false);
     }
